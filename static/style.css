@@ -1,0 +1,30 @@
+th, tr, td {text-align:center;padding:8px}
+tr.past {text-decoration: line-through; color: gray}
+tr.future i:hover {opacity:0.8}
+tr.future i {cursor:pointer}
+.glyphicon-ok:before {
+  font-family: 'Font Awesome 5 Free';
+  visibility: visible;
+  content: "\f00c";
+  font-weight: 900;
+}
+.glyphicon-remove:before {
+  font-family: 'Font Awesome 5 Free';
+  visibility: visible;
+  content: "\f00d";
+  font-weight: 900;
+}
+.glyphicon {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.table-container{
+  text-align: center
+}
+table{
+  margin: auto;
+}

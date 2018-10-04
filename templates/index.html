@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+    {% include 'head.html' %}
+    <body>
+
+      {% with active="people"%}
+        {% include 'nav.html' %}
+      {% endwith %}
+      <main role="main" class="container">
+
+        <div class="starter-template">
+          <p class="lead">Request, schedule, and remind khateebs. Right-click to send emails. All data is saved locally.</p>
+
+          <div class="row span12 well table-container">
+              <table class='class="table table-striped table-bordered  offset1' id="table">
+                    <thead>  <tr>
+                      <th>Day</th>
+                      <th>Name</th>
+                      <th>Email</th>
+                      <th><i class='fas fa-envelope'></i> Requested?</th>
+                      <th>Confirmed?</th>
+                      <th><i class='fas fa-envelope'></i> Reminded?</th>
+                        </tr>   </thead>
+                        <tbody>
+                        </tbody>
+              </table>
+          </div>
+          <hr>
+        </div>
+
+        {% include 'modal.html' %}
+
+      </main><!-- /.container -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script>
+    var startDate = new Date({{start_date}});
+    var endDate = new Date({{end_date}});
+    var khateeb_request_email = "{{khateeb_request_email|safe}}"
+    var khateeb_remind_email = "{{khateeb_reminder_email|safe}}"
+    </script>
+    {% include 'foot.html' %}
+    <script src="static/index.js"></script>
+  </body>
+</html>

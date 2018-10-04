@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <a class="navbar-brand" href="#">Khateebi</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item {%if active == 'people'%}active{%endif%}">
+        <a class="nav-link" href="/">People<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item {%if active == "email_templates"%}active{%endif%}">
+        <a class="nav-link" href="/email-templates">Templates<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item {%if active == "faq"%}active{%endif%}">
+        <a class="nav-link" href="/faq">FAQs<span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+      <!-- <button class='btn btn-large btn-success'>Save</button> -->
+  </div>
+</nav>

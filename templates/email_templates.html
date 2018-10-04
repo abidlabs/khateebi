@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+    {% include 'head.html' %}
+    <body>
+
+      {% with active="email_templates"%}
+        {% include 'nav.html' %}
+      {% endwith %}
+      <main role="main" class="container">
+
+        <div>
+          <p class="lead">Khateeb Request Email</p>
+          <div>
+            {{khateeb_request_email|safe}}
+          </div>
+          <hr>
+          <p class="lead">Reminder Email</p>
+          <div>
+            {{khateeb_reminder_email|safe}}
+          </div>
+        </div>
+      </main><!-- /.container -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    {% include 'foot.html' %}
+    <script src="static/index.js"></script>
+  </body>
+</html>

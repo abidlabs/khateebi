@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+    {% include 'head.html' %}
+    <body>
+
+      {% with active="faq"%}
+        {% include 'nav.html' %}
+      {% endwith %}
+      <main role="main" class="container">
+
+        <div>
+          <p class="lead">How Do I Change the Dates?</p>
+          <div>
+            To change the dates, open the <code>settings.py</code> file using notepad or a different editor. You'll see something like the following lines: <p>&nbsp;</p>
+            <pre>
+            start_date = [2018, 9, 28]  # YYYY, MM, DD
+            end_date = [2018, 12, 14]  # YYYY, MM, DD
+            </pre>
+            Go ahead and change them to whichever dates you'd like to start and end at. For example, if you'd like the starting jumu'ah to be January 4th, 2019, change the value of <code>start_date</code> to be <code>[2019, 1, 4]</code>. <strong>Note:</strong> changing the dates will automatically <strong>delete</strong> all locally-saved data! There is no way to recover this data.
+          </div>
+          <hr>
+          <p class="lead">How Do I Change the Email Templates?</p>
+          <div>
+            To change the templates, open the <code>settings.py</code> file using notepad or a different editor. You'll see something like the following lines: <p>&nbsp;</p>
+            <pre>
+            khateeb_request_email = ...
+            khateeb_reminder_email = ...
+            </pre>
+            Go ahead and change the templates to whatever you like. You can use HTML tags in the templates.
+          </div>
+          <hr>
+          <p class="lead">Who Made This?</p>
+          <div>
+            Khateebi was originally built by <a href="https://abidlabs.github.io">Abubakar Abid</a>. It is released under the <em>Madinah License</em>: feel free to use the code, modify the code, or commercialize it. The author has released this in hopes of a recurring reward from God and asks that you pray for him and his family.
+          </div>
+        </div>
+
+      </main><!-- /.container -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    {% include 'foot.html' %}
+    <script src="static/index.js"></script>
+  </body>
+</html>
